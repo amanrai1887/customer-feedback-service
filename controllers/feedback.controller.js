@@ -1,3 +1,5 @@
+const Feedback = require("../models/Feedback");
+
 exports.submitFeedback = async (req, res) => {
     const feedback = await Feedback.create({
       ...req.body,

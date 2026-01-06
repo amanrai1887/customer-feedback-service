@@ -1,3 +1,5 @@
+const Feedback = require("../models/Feedback");
+
 exports.analytics = async (req, res) => {
     const avgRating = await Feedback.aggregate([
       { $group: { _id: null, avg: { $avg: "$rating" } } }
